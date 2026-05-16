@@ -9,7 +9,7 @@ Baseline runtime for all hiker/field nodes.
 
 ## Offline/mobile behavior
 - Node writes telemetry locally first (`raw/` + `jsonl/`).
-- Loss of Wi-Fi does **not** stop collection.
+- Loss of Internet does **not** stop collection.
 - Sync job retries every 2 minutes and forwards backlog when link returns.
 
 ## Deploy sync spool
