@@ -4,6 +4,8 @@ After=network-online.target
 
 [Service]
 Type=oneshot
+User=pump
+Group=pump
 ExecStart=/usr/bin/bash /home/pump/telemetry_sync_spool.sh
 Environment=OUT_DIR=/home/pump/telemetry
-Environment=REMOTE_TARGET=pump@100.83.26.116:/home/pump/manet_ingest/meshhikernode1
+Environment=REMOTE_TARGET=pump@100.119.24.3:/home/pump/manet_ingest/meshhikernode1
