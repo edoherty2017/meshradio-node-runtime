@@ -11,6 +11,10 @@ Baseline runtime for all hiker/field nodes.
 - Node writes telemetry locally first (`raw/` + `jsonl/`).
 - Loss of Internet does **not** stop collection.
 - Sync job retries every 2 minutes and forwards backlog when link returns.
+- Sync spool now emits connectivity transition events to `connectivity_events.jsonl` with:
+  - `CONNECTIVITY_MODE_CHANGE` (`IP_FULL`, `IP_DEGRADED`, `MESH_ONLY`)
+  - `CONTROL_PLANE_DOWN_START`
+  - `CONTROL_PLANE_DOWN_END`
 
 ## Deploy sync spool
 Copy files to target Pi and enable timer:
